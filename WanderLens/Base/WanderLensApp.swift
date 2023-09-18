@@ -9,6 +9,12 @@ import SwiftUI
 
 @main
 struct WanderLensApp: App {
+    
+    lazy var appController: AppController = {
+        guard let window = UIWindow.main else { fatalError("No window found!") }
+        return AppController(window: window)
+    }()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
