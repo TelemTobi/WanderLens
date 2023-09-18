@@ -26,6 +26,21 @@
 		7D62E8172AB8751D002AA24F /* Locale+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E8162AB8751D002AA24F /* Locale+Extension.swift */; };
 		7D62E81A2AB87565002AA24F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E8192AB87565002AA24F /* Coordinator.swift */; };
 		7D62E81C2AB875BD002AA24F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E81B2AB875BD002AA24F /* AppCoordinator.swift */; };
+		7D62E81E2AB87891002AA24F /* Authenticating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E81D2AB87891002AA24F /* Authenticating.swift */; };
+		7D62E8202AB878D5002AA24F /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E81F2AB878D5002AA24F /* Networking.swift */; };
+		7D62E8232AB87946002AA24F /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 7D62E8222AB87946002AA24F /* Moya */; };
+		7D62E8252AB87961002AA24F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E8242AB87961002AA24F /* NetworkManager.swift */; };
+		7D62E8272AB8797D002AA24F /* NetworkManager+Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E8262AB8797D002AA24F /* NetworkManager+Debug.swift */; };
+		7D62E8292AB87AEE002AA24F /* TargetEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E8282AB87AEE002AA24F /* TargetEndPoint.swift */; };
+		7D62E82B2AB87B43002AA24F /* DataProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E82A2AB87B43002AA24F /* DataProviding.swift */; };
+		7D62E82E2AB87C15002AA24F /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E82D2AB87C15002AA24F /* APIError.swift */; };
+		7D62E8302AB87C2E002AA24F /* Errorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E82F2AB87C2E002AA24F /* Errorable.swift */; };
+		7D62E8322AB87C54002AA24F /* PredefinedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E8312AB87C54002AA24F /* PredefinedError.swift */; };
+		7D62E8352AB87C87002AA24F /* JsonResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E8342AB87C87002AA24F /* JsonResolver.swift */; };
+		7D62E8372AB87E90002AA24F /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E8362AB87E8F002AA24F /* Int+Extension.swift */; };
+		7D62E8392AB87EB4002AA24F /* Error+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E8382AB87EB4002AA24F /* Error+Extension.swift */; };
+		7D62E83C2AB87EF6002AA24F /* Response+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E83B2AB87EF6002AA24F /* Response+Extension.swift */; };
+		7D62E83E2AB87F1C002AA24F /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E83D2AB87F1C002AA24F /* Data+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +84,20 @@
 		7D62E8162AB8751D002AA24F /* Locale+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+Extension.swift"; sourceTree = "<group>"; };
 		7D62E8192AB87565002AA24F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		7D62E81B2AB875BD002AA24F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		7D62E81D2AB87891002AA24F /* Authenticating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authenticating.swift; sourceTree = "<group>"; };
+		7D62E81F2AB878D5002AA24F /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		7D62E8242AB87961002AA24F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		7D62E8262AB8797D002AA24F /* NetworkManager+Debug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkManager+Debug.swift"; sourceTree = "<group>"; };
+		7D62E8282AB87AEE002AA24F /* TargetEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetEndPoint.swift; sourceTree = "<group>"; };
+		7D62E82A2AB87B43002AA24F /* DataProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviding.swift; sourceTree = "<group>"; };
+		7D62E82D2AB87C15002AA24F /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		7D62E82F2AB87C2E002AA24F /* Errorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errorable.swift; sourceTree = "<group>"; };
+		7D62E8312AB87C54002AA24F /* PredefinedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredefinedError.swift; sourceTree = "<group>"; };
+		7D62E8342AB87C87002AA24F /* JsonResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonResolver.swift; sourceTree = "<group>"; };
+		7D62E8362AB87E8F002AA24F /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		7D62E8382AB87EB4002AA24F /* Error+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extension.swift"; sourceTree = "<group>"; };
+		7D62E83B2AB87EF6002AA24F /* Response+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Response+Extension.swift"; sourceTree = "<group>"; };
+		7D62E83D2AB87F1C002AA24F /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D62E8232AB87946002AA24F /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,7 +224,14 @@
 		7D62E7FB2AB87479002AA24F /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				7D62E81D2AB87891002AA24F /* Authenticating.swift */,
+				7D62E81F2AB878D5002AA24F /* Networking.swift */,
+				7D62E8242AB87961002AA24F /* NetworkManager.swift */,
+				7D62E8262AB8797D002AA24F /* NetworkManager+Debug.swift */,
+				7D62E8282AB87AEE002AA24F /* TargetEndPoint.swift */,
 				7D62E7FC2AB87479002AA24F /* Data Providers */,
+				7D62E82C2AB87B52002AA24F /* Errors */,
+				7D62E8332AB87C6E002AA24F /* JsonResolver */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -203,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				7D62E7FD2AB87479002AA24F /* DataProviders.swift */,
+				7D62E82A2AB87B43002AA24F /* DataProviding.swift */,
 			);
 			path = "Data Providers";
 			sourceTree = "<group>";
@@ -263,8 +301,9 @@
 			isa = PBXGroup;
 			children = (
 				7D62E80B2AB87479002AA24F /* Foundation */,
-				7D62E80D2AB87479002AA24F /* SwiftUI */,
 				7D62E8082AB87479002AA24F /* UIKit */,
+				7D62E80D2AB87479002AA24F /* SwiftUI */,
+				7D62E83A2AB87EDA002AA24F /* Moya */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -281,7 +320,10 @@
 		7D62E80B2AB87479002AA24F /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				7D62E83D2AB87F1C002AA24F /* Data+Extension.swift */,
 				7D62E80C2AB87479002AA24F /* Date+Extension.swift */,
+				7D62E8382AB87EB4002AA24F /* Error+Extension.swift */,
+				7D62E8362AB87E8F002AA24F /* Int+Extension.swift */,
 				7D62E8162AB8751D002AA24F /* Locale+Extension.swift */,
 			);
 			path = Foundation;
@@ -317,6 +359,32 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		7D62E82C2AB87B52002AA24F /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				7D62E82D2AB87C15002AA24F /* APIError.swift */,
+				7D62E82F2AB87C2E002AA24F /* Errorable.swift */,
+				7D62E8312AB87C54002AA24F /* PredefinedError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		7D62E8332AB87C6E002AA24F /* JsonResolver */ = {
+			isa = PBXGroup;
+			children = (
+				7D62E8342AB87C87002AA24F /* JsonResolver.swift */,
+			);
+			path = JsonResolver;
+			sourceTree = "<group>";
+		};
+		7D62E83A2AB87EDA002AA24F /* Moya */ = {
+			isa = PBXGroup;
+			children = (
+				7D62E83B2AB87EF6002AA24F /* Response+Extension.swift */,
+			);
+			path = Moya;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -333,6 +401,9 @@
 			dependencies = (
 			);
 			name = WanderLens;
+			packageProductDependencies = (
+				7D62E8222AB87946002AA24F /* Moya */,
+			);
 			productName = WanderLens;
 			productReference = 7D62E7BC2AB78BCE002AA24F /* WanderLens.app */;
 			productType = "com.apple.product-type.application";
@@ -405,6 +476,9 @@
 				Base,
 			);
 			mainGroup = 7D62E7B32AB78BCE002AA24F;
+			packageReferences = (
+				7D62E8212AB87946002AA24F /* XCRemoteSwiftPackageReference "Moya" */,
+			);
 			productRefGroup = 7D62E7BD2AB78BCE002AA24F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -447,20 +521,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D62E81E2AB87891002AA24F /* Authenticating.swift in Sources */,
+				7D62E83E2AB87F1C002AA24F /* Data+Extension.swift in Sources */,
 				7D62E7C22AB78BCE002AA24F /* ContentView.swift in Sources */,
+				7D62E8322AB87C54002AA24F /* PredefinedError.swift in Sources */,
 				7D62E8132AB87479002AA24F /* UIWindow+Extension.swift in Sources */,
+				7D62E8202AB878D5002AA24F /* Networking.swift in Sources */,
+				7D62E8302AB87C2E002AA24F /* Errorable.swift in Sources */,
+				7D62E8392AB87EB4002AA24F /* Error+Extension.swift in Sources */,
 				7D62E8142AB87479002AA24F /* UINavigationController+Extension.swift in Sources */,
 				7D62E7F62AB8745C002AA24F /* Services.swift in Sources */,
 				7D62E7C02AB78BCE002AA24F /* WanderLensApp.swift in Sources */,
+				7D62E8352AB87C87002AA24F /* JsonResolver.swift in Sources */,
+				7D62E8372AB87E90002AA24F /* Int+Extension.swift in Sources */,
 				7D62E8152AB87479002AA24F /* Date+Extension.swift in Sources */,
 				7D62E81A2AB87565002AA24F /* Coordinator.swift in Sources */,
 				7D62E8102AB87479002AA24F /* DataProviders.swift in Sources */,
+				7D62E82B2AB87B43002AA24F /* DataProviding.swift in Sources */,
+				7D62E8272AB8797D002AA24F /* NetworkManager+Debug.swift in Sources */,
+				7D62E8252AB87961002AA24F /* NetworkManager.swift in Sources */,
 				7D62E8172AB8751D002AA24F /* Locale+Extension.swift in Sources */,
 				7D62E7F42AB8745C002AA24F /* Interactor.swift in Sources */,
 				7D62E7F32AB8745C002AA24F /* AppData.swift in Sources */,
+				7D62E8292AB87AEE002AA24F /* TargetEndPoint.swift in Sources */,
 				7D62E81C2AB875BD002AA24F /* AppCoordinator.swift in Sources */,
 				7D62E7F72AB8745C002AA24F /* AppController.swift in Sources */,
 				7D62E7F82AB8745C002AA24F /* Constants.swift in Sources */,
+				7D62E82E2AB87C15002AA24F /* APIError.swift in Sources */,
+				7D62E83C2AB87EF6002AA24F /* Response+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,7 +702,7 @@
 				CODE_SIGN_ENTITLEMENTS = WanderLens/Support/AppConfig/WanderLens.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WanderLens/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WanderLens/Support/Resources/Preview\"";
 				DEVELOPMENT_TEAM = 765F9357QN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -652,7 +740,7 @@
 				CODE_SIGN_ENTITLEMENTS = WanderLens/Support/AppConfig/WanderLens.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"WanderLens/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WanderLens/Support/Resources/Preview\"";
 				DEVELOPMENT_TEAM = 765F9357QN;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -812,6 +900,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7D62E8212AB87946002AA24F /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D62E8222AB87946002AA24F /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D62E8212AB87946002AA24F /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7D62E7B42AB78BCE002AA24F /* Project object */;
 }
