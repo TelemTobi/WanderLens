@@ -31,7 +31,7 @@ class NetworkManager<E: TargetTypeEndPoint, F: Errorable>: Networking {
         stubbingProvider = MoyaProvider<EndPoint>(stubClosure: MoyaProvider.delayedStub(Constants.TimeInterval.stubDelay))
     }
     
-    func request<T, F: Errorable>(_ endpoint: EndPoint, completion: @escaping (Result<T, F>) -> Void) where T: Codable, T: JsonResolver {
+    func request<T, F: Errorable>(_ endpoint: EndPoint, completion: @escaping (Result<T, F>) -> Void) where T: Decodable, T: JsonResolver {
         
         guard endpoint.shouldRequestStub == false else {
             makeStubRequest(endpoint, completion: completion)

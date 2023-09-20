@@ -20,7 +20,7 @@ extension Data {
         return prettyPrintedJSON
     }
     
-    func parse<T: Codable>(type: T.Type, dateDecodingStrategy: JSONDecoder.DateDecodingStrategy? = .iso8601, keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy = .useDefaultKeys) throws -> T {
+    func parse<T: Decodable>(type: T.Type, dateDecodingStrategy: JSONDecoder.DateDecodingStrategy? = .iso8601, keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy = .useDefaultKeys) throws -> T {
         
         let jsonDecoder = JSONDecoder()
         jsonDecoder.keyDecodingStrategy = keyDecodingStrategy

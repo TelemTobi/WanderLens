@@ -9,7 +9,7 @@ import SwiftUI
 
 // MARK: -  Typealias
 
-typealias Parsable = Codable & JsonResolver
+typealias Parsable = Decodable & JsonResolver
 typealias JsonDictionary = [String: Any]
 typealias DateFormat = Date.DateFormat
 
@@ -17,6 +17,10 @@ typealias DateFormat = Date.DateFormat
 
 typealias SuccessCompletion = (_ success: Bool) -> Void
 typealias EmptyCompletion = () -> Void
+
+typealias PhotosSearchCompletion = (PhotosSearchResponse?, Errorable?)
+typealias CollectionsSearchCompletion = (CollectionsSearchResponse?, Errorable?)
+typealias UsersSearchCompletion = (UsersSearchResponse?, Errorable?)
 
 // MARK: - Contstants
 
