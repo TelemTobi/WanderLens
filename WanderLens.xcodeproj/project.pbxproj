@@ -41,6 +41,8 @@
 		7D62E8392AB87EB4002AA24F /* Error+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E8382AB87EB4002AA24F /* Error+Extension.swift */; };
 		7D62E83C2AB87EF6002AA24F /* Response+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E83B2AB87EF6002AA24F /* Response+Extension.swift */; };
 		7D62E83E2AB87F1C002AA24F /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E83D2AB87F1C002AA24F /* Data+Extension.swift */; };
+		7D62E8402ABB17DD002AA24F /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E83F2ABB17DD002AA24F /* Configurations.swift */; };
+		7D62E8432ABB1838002AA24F /* UnsplashAuthenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E8422ABB1837002AA24F /* UnsplashAuthenticator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,8 @@
 		7D62E8382AB87EB4002AA24F /* Error+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Error+Extension.swift"; sourceTree = "<group>"; };
 		7D62E83B2AB87EF6002AA24F /* Response+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Response+Extension.swift"; sourceTree = "<group>"; };
 		7D62E83D2AB87F1C002AA24F /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extension.swift"; sourceTree = "<group>"; };
+		7D62E83F2ABB17DD002AA24F /* Configurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
+		7D62E8422ABB1837002AA24F /* UnsplashAuthenticator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashAuthenticator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +233,7 @@
 				7D62E8242AB87961002AA24F /* NetworkManager.swift */,
 				7D62E8262AB8797D002AA24F /* NetworkManager+Debug.swift */,
 				7D62E8282AB87AEE002AA24F /* TargetEndPoint.swift */,
+				7D62E8412ABB1827002AA24F /* Authenticators */,
 				7D62E7FC2AB87479002AA24F /* Data Providers */,
 				7D62E82C2AB87B52002AA24F /* Errors */,
 				7D62E8332AB87C6E002AA24F /* JsonResolver */,
@@ -283,6 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				7D62E7C52AB78BCF002AA24F /* WanderLens.entitlements */,
+				7D62E83F2ABB17DD002AA24F /* Configurations.swift */,
 			);
 			path = AppConfig;
 			sourceTree = "<group>";
@@ -383,6 +389,14 @@
 				7D62E83B2AB87EF6002AA24F /* Response+Extension.swift */,
 			);
 			path = Moya;
+			sourceTree = "<group>";
+		};
+		7D62E8412ABB1827002AA24F /* Authenticators */ = {
+			isa = PBXGroup;
+			children = (
+				7D62E8422ABB1837002AA24F /* UnsplashAuthenticator.swift */,
+			);
+			path = Authenticators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -526,6 +540,7 @@
 				7D62E7C22AB78BCE002AA24F /* ContentView.swift in Sources */,
 				7D62E8322AB87C54002AA24F /* PredefinedError.swift in Sources */,
 				7D62E8132AB87479002AA24F /* UIWindow+Extension.swift in Sources */,
+				7D62E8432ABB1838002AA24F /* UnsplashAuthenticator.swift in Sources */,
 				7D62E8202AB878D5002AA24F /* Networking.swift in Sources */,
 				7D62E8302AB87C2E002AA24F /* Errorable.swift in Sources */,
 				7D62E8392AB87EB4002AA24F /* Error+Extension.swift in Sources */,
@@ -546,6 +561,7 @@
 				7D62E8292AB87AEE002AA24F /* TargetEndPoint.swift in Sources */,
 				7D62E81C2AB875BD002AA24F /* AppCoordinator.swift in Sources */,
 				7D62E7F72AB8745C002AA24F /* AppController.swift in Sources */,
+				7D62E8402ABB17DD002AA24F /* Configurations.swift in Sources */,
 				7D62E7F82AB8745C002AA24F /* Constants.swift in Sources */,
 				7D62E82E2AB87C15002AA24F /* APIError.swift in Sources */,
 				7D62E83C2AB87EF6002AA24F /* Response+Extension.swift in Sources */,

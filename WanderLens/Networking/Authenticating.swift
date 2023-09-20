@@ -6,15 +6,19 @@
 //
 
 import Foundation
+import Moya
 
 enum AuthState {
     case reachable, noReachable, notLoggedIn
 }
 
 protocol Authenticating {
+    var accessKey: String? { get }
     var authState: AuthState { get }
-    
-    var accessToken: String? { get }
+
+    // Can be used to asynchronously authenticate the user
     func authenticate(with completion: @escaping SuccessCompletion) throws
-    func authenticate(_ request: URLRequest, done: @escaping (URLRequest) -> Void)
+    
+    // Can be used to map the endpoint right before the request is excecuted
+    func mapEndpoint(_ endpoint: Endpoint, for target: TargetTypeEndPoint) -> Endpoint
 }

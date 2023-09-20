@@ -22,16 +22,12 @@ class NetworkManager<E: TargetTypeEndPoint, F: Errorable>: Networking {
     }
     
     private func configure() {
-        
-        let requestClosure: MoyaProvider<EndPoint>.RequestClosure = { [unowned self] (endpoint: Endpoint, done: @escaping MoyaProvider.RequestResultClosure) in
-            guard let request = try? endpoint.urlRequest() else { return }
-            
-            self.authenticator.authenticate(request, done: { request in
-                done(.success(request))
-            })
+        let endpointClosure: MoyaProvider<EndPoint>.EndpointClosure = { [unowned self] target in
+            let defaultEndpoint = MoyaProvider.defaultEndpointMapping(for: target)
+            return authenticator.mapEndpoint(defaultEndpoint, for: target)
         }
         
-        provider = MoyaProvider<EndPoint>(requestClosure: requestClosure)
+        provider = MoyaProvider<EndPoint>(endpointClosure: endpointClosure)
         stubbingProvider = MoyaProvider<EndPoint>(stubClosure: MoyaProvider.delayedStub(Constants.TimeInterval.stubDelay))
     }
     
