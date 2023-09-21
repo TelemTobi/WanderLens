@@ -54,6 +54,7 @@
 		7D62E8592ABC7F87002AA24F /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E8582ABC7F87002AA24F /* MainScreenPresenter.swift */; };
 		7D62E85B2ABC7F8F002AA24F /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E85A2ABC7F8F002AA24F /* MainScreenRouter.swift */; };
 		7D62E85D2ABC7F97002AA24F /* MainScreenWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E85C2ABC7F97002AA24F /* MainScreenWireframe.swift */; };
+		7D62E85F2ABC8805002AA24F /* OnFirstAppear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E85E2ABC8805002AA24F /* OnFirstAppear.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,7 @@
 		7D62E8582ABC7F87002AA24F /* MainScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
 		7D62E85A2ABC7F8F002AA24F /* MainScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouter.swift; sourceTree = "<group>"; };
 		7D62E85C2ABC7F97002AA24F /* MainScreenWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenWireframe.swift; sourceTree = "<group>"; };
+		7D62E85E2ABC8805002AA24F /* OnFirstAppear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnFirstAppear.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -381,6 +383,7 @@
 		7D62E80F2AB87479002AA24F /* View Modifiers */ = {
 			isa = PBXGroup;
 			children = (
+				7D62E85E2ABC8805002AA24F /* OnFirstAppear.swift */,
 			);
 			path = "View Modifiers";
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 				7D62E8202AB878D5002AA24F /* Networking.swift in Sources */,
 				7D62E8482ABB20BF002AA24F /* UnsplashDataProvider.swift in Sources */,
 				7D62E8592ABC7F87002AA24F /* MainScreenPresenter.swift in Sources */,
+				7D62E85F2ABC8805002AA24F /* OnFirstAppear.swift in Sources */,
 				7D62E8302AB87C2E002AA24F /* Errorable.swift in Sources */,
 				7D62E8392AB87EB4002AA24F /* Error+Extension.swift in Sources */,
 				7D62E8142AB87479002AA24F /* UINavigationController+Extension.swift in Sources */,

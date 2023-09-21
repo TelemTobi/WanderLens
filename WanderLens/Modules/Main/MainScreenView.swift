@@ -23,6 +23,7 @@ struct MainScreenView: View {
             Text("Hello, world!")
         }
         .padding()
+        .onFirstAppear(perform: presenter.onFirstAppear)
     }
 }
 
