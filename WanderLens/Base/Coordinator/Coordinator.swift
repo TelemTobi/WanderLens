@@ -13,7 +13,7 @@ protocol Coordinator: AnyObject {
     var interactor: Interactor { get set }
     var childCoordinators: [Coordinator] { get set }
     
-    init(window: UIWindow, interactor: Interactor)
+    init(interactor: Interactor)
     
     /**
      Starts a new flow.

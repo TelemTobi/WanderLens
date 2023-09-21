@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7D62E7C02AB78BCE002AA24F /* WanderLensApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E7BF2AB78BCE002AA24F /* WanderLensApp.swift */; };
-		7D62E7C22AB78BCE002AA24F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E7C12AB78BCE002AA24F /* ContentView.swift */; };
+		7D62E7C22AB78BCE002AA24F /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E7C12AB78BCE002AA24F /* MainScreenView.swift */; };
 		7D62E7C42AB78BCF002AA24F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D62E7C32AB78BCF002AA24F /* Assets.xcassets */; };
 		7D62E7D22AB78BCF002AA24F /* WanderLensTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E7D12AB78BCF002AA24F /* WanderLensTests.swift */; };
 		7D62E7DC2AB78BCF002AA24F /* WanderLensUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E7DB2AB78BCF002AA24F /* WanderLensUITests.swift */; };
@@ -50,6 +50,10 @@
 		7D62E8512ABB2ACB002AA24F /* PhotosSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E8502ABB2ACB002AA24F /* PhotosSearchResponse.swift */; };
 		7D62E8532ABB2AEB002AA24F /* CollectionsSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E8522ABB2AEB002AA24F /* CollectionsSearchResponse.swift */; };
 		7D62E8552ABB2B10002AA24F /* UsersSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E8542ABB2B10002AA24F /* UsersSearchResponse.swift */; };
+		7D62E8572ABC7F7E002AA24F /* MainScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E8562ABC7F7E002AA24F /* MainScreenInteractor.swift */; };
+		7D62E8592ABC7F87002AA24F /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E8582ABC7F87002AA24F /* MainScreenPresenter.swift */; };
+		7D62E85B2ABC7F8F002AA24F /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E85A2ABC7F8F002AA24F /* MainScreenRouter.swift */; };
+		7D62E85D2ABC7F97002AA24F /* MainScreenWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D62E85C2ABC7F97002AA24F /* MainScreenWireframe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +76,7 @@
 /* Begin PBXFileReference section */
 		7D62E7BC2AB78BCE002AA24F /* WanderLens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WanderLens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D62E7BF2AB78BCE002AA24F /* WanderLensApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WanderLensApp.swift; sourceTree = "<group>"; };
-		7D62E7C12AB78BCE002AA24F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7D62E7C12AB78BCE002AA24F /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		7D62E7C32AB78BCF002AA24F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D62E7C52AB78BCF002AA24F /* WanderLens.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WanderLens.entitlements; sourceTree = "<group>"; };
 		7D62E7CD2AB78BCF002AA24F /* WanderLensTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WanderLensTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +120,10 @@
 		7D62E8502ABB2ACB002AA24F /* PhotosSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosSearchResponse.swift; sourceTree = "<group>"; };
 		7D62E8522ABB2AEB002AA24F /* CollectionsSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsSearchResponse.swift; sourceTree = "<group>"; };
 		7D62E8542ABB2B10002AA24F /* UsersSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersSearchResponse.swift; sourceTree = "<group>"; };
+		7D62E8562ABC7F7E002AA24F /* MainScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenInteractor.swift; sourceTree = "<group>"; };
+		7D62E8582ABC7F87002AA24F /* MainScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
+		7D62E85A2ABC7F8F002AA24F /* MainScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouter.swift; sourceTree = "<group>"; };
+		7D62E85C2ABC7F97002AA24F /* MainScreenWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenWireframe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,7 +228,11 @@
 		7D62E7EC2AB87446002AA24F /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				7D62E7C12AB78BCE002AA24F /* ContentView.swift */,
+				7D62E8562ABC7F7E002AA24F /* MainScreenInteractor.swift */,
+				7D62E8582ABC7F87002AA24F /* MainScreenPresenter.swift */,
+				7D62E85A2ABC7F8F002AA24F /* MainScreenRouter.swift */,
+				7D62E7C12AB78BCE002AA24F /* MainScreenView.swift */,
+				7D62E85C2ABC7F97002AA24F /* MainScreenWireframe.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -344,10 +356,10 @@
 			children = (
 				7D62E83D2AB87F1C002AA24F /* Data+Extension.swift */,
 				7D62E80C2AB87479002AA24F /* Date+Extension.swift */,
+				7D62E84E2ABB2A0C002AA24F /* Encodable+Extension.swift */,
 				7D62E8382AB87EB4002AA24F /* Error+Extension.swift */,
 				7D62E8362AB87E8F002AA24F /* Int+Extension.swift */,
 				7D62E8162AB8751D002AA24F /* Locale+Extension.swift */,
-				7D62E84E2ABB2A0C002AA24F /* Encodable+Extension.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -576,23 +588,27 @@
 				7D62E84B2ABB2335002AA24F /* SearchRequest.swift in Sources */,
 				7D62E83E2AB87F1C002AA24F /* Data+Extension.swift in Sources */,
 				7D62E84F2ABB2A0C002AA24F /* Encodable+Extension.swift in Sources */,
-				7D62E7C22AB78BCE002AA24F /* ContentView.swift in Sources */,
+				7D62E7C22AB78BCE002AA24F /* MainScreenView.swift in Sources */,
 				7D62E8322AB87C54002AA24F /* PredefinedError.swift in Sources */,
 				7D62E8132AB87479002AA24F /* UIWindow+Extension.swift in Sources */,
 				7D62E8432ABB1838002AA24F /* UnsplashAuthenticator.swift in Sources */,
 				7D62E8462ABB20B5002AA24F /* UnsplashEndpoints.swift in Sources */,
 				7D62E8202AB878D5002AA24F /* Networking.swift in Sources */,
 				7D62E8482ABB20BF002AA24F /* UnsplashDataProvider.swift in Sources */,
+				7D62E8592ABC7F87002AA24F /* MainScreenPresenter.swift in Sources */,
 				7D62E8302AB87C2E002AA24F /* Errorable.swift in Sources */,
 				7D62E8392AB87EB4002AA24F /* Error+Extension.swift in Sources */,
 				7D62E8142AB87479002AA24F /* UINavigationController+Extension.swift in Sources */,
+				7D62E85D2ABC7F97002AA24F /* MainScreenWireframe.swift in Sources */,
 				7D62E7F62AB8745C002AA24F /* Services.swift in Sources */,
 				7D62E7C02AB78BCE002AA24F /* WanderLensApp.swift in Sources */,
 				7D62E8352AB87C87002AA24F /* JsonResolver.swift in Sources */,
+				7D62E8572ABC7F7E002AA24F /* MainScreenInteractor.swift in Sources */,
 				7D62E8372AB87E90002AA24F /* Int+Extension.swift in Sources */,
 				7D62E8552ABB2B10002AA24F /* UsersSearchResponse.swift in Sources */,
 				7D62E8152AB87479002AA24F /* Date+Extension.swift in Sources */,
 				7D62E81A2AB87565002AA24F /* Coordinator.swift in Sources */,
+				7D62E85B2ABC7F8F002AA24F /* MainScreenRouter.swift in Sources */,
 				7D62E8102AB87479002AA24F /* DataProviders.swift in Sources */,
 				7D62E82B2AB87B43002AA24F /* DataProviding.swift in Sources */,
 				7D62E8272AB8797D002AA24F /* NetworkManager+Debug.swift in Sources */,

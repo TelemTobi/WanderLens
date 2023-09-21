@@ -7,21 +7,27 @@
 
 import Foundation
 
-class Interactor {
-    
-    typealias Dependencies = (
-        appData: AppData,
-        services: Services,
-        dataProviders: DataProviders
-    )
+protocol Interactable {
+    var appData: AppData { get }
+    var services: Services { get }
+    var dataProviders: DataProviders { get }
+}
+
+class Interactor: Interactable {
     
     let appData: AppData
     let services: Services
     let dataProviders: DataProviders
     
-    init(appData: AppData) {
+    init(appData: AppData, services: Services, dataProviders: DataProviders) {
         self.appData = appData
-        self.services = Services()
-        self.dataProviders = DataProviders(appData: appData)
+        self.services = services
+        self.dataProviders = dataProviders
+    }
+    
+    init(interactable: Interactable) {
+        self.appData = interactable.appData
+        self.services = interactable.services
+        self.dataProviders = interactable.dataProviders
     }
 }

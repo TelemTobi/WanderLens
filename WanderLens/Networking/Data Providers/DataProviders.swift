@@ -10,8 +10,10 @@ import Foundation
 class DataProviders {
     
     private let appData: AppData
+    let unsplash: UnsplashDataProvider
     
     init(appData: AppData) {
         self.appData = appData
+        self.unsplash = UnsplashDataProvider(appData: appData)
     }
 }
