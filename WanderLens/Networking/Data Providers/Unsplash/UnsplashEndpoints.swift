@@ -9,6 +9,9 @@ import Foundation
 import Moya
 
 enum UnsplashEndPoints {
+    case listPhotos(request: ListRequest)
+    case listCollections(request: ListRequest)
+    
     case searchPhotos(request: SearchRequest)
     case searchCollections(request: SearchRequest)
     case searchUsers(request: SearchRequest)
@@ -20,6 +23,8 @@ extension UnsplashEndPoints: TargetTypeEndPoint {
     
     var path: String {
         switch self {
+        case .listPhotos: return "/photos"
+        case .listCollections: return "/collections"
         case .searchPhotos: return "/search/photos"
         case .searchCollections: return "/search/collections"
         case .searchUsers: return "/search/users"
@@ -28,13 +33,24 @@ extension UnsplashEndPoints: TargetTypeEndPoint {
     
     var method: Moya.Method {
         switch self {
-        case .searchPhotos, .searchCollections, .searchUsers:
+        case .listPhotos,
+             .listCollections,
+             .searchPhotos,
+             .searchCollections,
+             .searchUsers:
+            
             return .get
         }
     }
     
     var task: Moya.Task {
         switch self {
+        case .listPhotos(let request),
+             .listCollections(let request):
+            
+            guard let parameters = request.dictionary else { return .requestPlain }
+            return .requestParameters(parameters: parameters, encoding: URLEncoding.queryString)
+            
         case .searchPhotos(let request),
              .searchCollections(let request),
              .searchUsers(let request):
@@ -46,21 +62,36 @@ extension UnsplashEndPoints: TargetTypeEndPoint {
     
     var headers: [String : String]? {
         switch self {
-        case .searchPhotos, .searchCollections, .searchUsers:
+        case .listPhotos,
+             .listCollections,
+             .searchPhotos,
+             .searchCollections,
+             .searchUsers:
+            
             return nil
         }
     }
     
     var keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy {
         switch self {
-        case .searchPhotos, .searchCollections, .searchUsers:
+        case .listPhotos,
+             .listCollections,
+             .searchPhotos,
+             .searchCollections,
+             .searchUsers:
+            
             return .useDefaultKeys
         }
     }
     
     var dateDecodingStrategy: JSONDecoder.DateDecodingStrategy {
         switch self {
-        case .searchPhotos, .searchCollections, .searchUsers:
+        case .listPhotos,
+             .listCollections,
+             .searchPhotos,
+             .searchCollections,
+             .searchUsers:
+            
             return .iso8601
         }
     }
@@ -68,14 +99,24 @@ extension UnsplashEndPoints: TargetTypeEndPoint {
     #if DEBUG
     var shouldRequestStub: Bool {
         switch self {
-        case .searchPhotos, .searchCollections, .searchUsers:
+        case .listPhotos,
+             .listCollections,
+             .searchPhotos,
+             .searchCollections,
+             .searchUsers:
+            
             return false
         }
     }
     
     var shouldPrintLogs: Bool {
         switch self {
-        case .searchPhotos, .searchCollections, .searchUsers:
+        case .listPhotos,
+             .listCollections,
+             .searchPhotos,
+             .searchCollections,
+             .searchUsers:
+            
             return true
         }
     }

@@ -20,6 +20,32 @@ class UnsplashDataProvider: DataProviding {
         self.networkManager = NetworkManager<UnsplashEndPoints, NetworkError>(authenticator: UnsplashAuthenticator())
     }
     
+    func listPhotos(request: ListRequest) async -> PhotosListCompletion {
+        return await withCheckedContinuation{ continuation in
+            networkManager.request(.listPhotos(request: request)) { (result: Result<[Photo], NetworkError>) in
+                switch result {
+                case .success(let response):
+                    continuation.resume(returning: (response, nil))
+                case .failure(let error):
+                    continuation.resume(returning: (nil, error))
+                }
+            }
+        }
+    }
+    
+    func listCollections(request: ListRequest) async -> CollectionsListCompletion {
+        return await withCheckedContinuation{ continuation in
+            networkManager.request(.listCollections(request: request)) { (result: Result<[PhotoCollection], NetworkError>) in
+                switch result {
+                case .success(let response):
+                    continuation.resume(returning: (response, nil))
+                case .failure(let error):
+                    continuation.resume(returning: (nil, error))
+                }
+            }
+        }
+    }
+    
     func searchPhotos(request: SearchRequest) async -> PhotosSearchCompletion {
         return await withCheckedContinuation { continuation in
             networkManager.request(.searchPhotos(request: request)) { (result: Result<PhotosSearchResponse, NetworkError>) in

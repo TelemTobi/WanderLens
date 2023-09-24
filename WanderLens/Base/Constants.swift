@@ -18,6 +18,9 @@ typealias DateFormat = Date.DateFormat
 typealias SuccessCompletion = (_ success: Bool) -> Void
 typealias EmptyCompletion = () -> Void
 
+typealias PhotosListCompletion = ([Photo]?, Errorable?)
+typealias CollectionsListCompletion = ([PhotoCollection]?, Errorable?)
+
 typealias PhotosSearchCompletion = (PhotosSearchResponse?, Errorable?)
 typealias CollectionsSearchCompletion = (CollectionsSearchResponse?, Errorable?)
 typealias UsersSearchCompletion = (UsersSearchResponse?, Errorable?)
