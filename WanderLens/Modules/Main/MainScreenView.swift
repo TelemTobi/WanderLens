@@ -11,18 +11,29 @@ struct MainScreenView: View {
     
     @ObservedObject private var presenter: MainScreenPresenter
     
+    @State private var selectedTab: Int = 0
+    
     init(presenter: MainScreenPresenter) {
         self.presenter = presenter
     }
     
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        TabView(selection: $selectedTab) {
+            Text("Home")
+                .tabItem {
+                    Label("Home", systemImage: "house")
+                }
+            
+            Text("Browse")
+                .tabItem {
+                    Label("Browse", systemImage: "globe.americas")
+                }
+            
+            Text("Profile")
+                .tabItem {
+                    Label("Profile", systemImage: "person")
+                }
         }
-        .padding()
         .onFirstAppear(perform: presenter.onFirstAppear)
     }
 }
