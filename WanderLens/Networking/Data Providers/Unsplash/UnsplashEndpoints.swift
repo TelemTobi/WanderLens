@@ -99,13 +99,29 @@ extension UnsplashEndPoints: TargetTypeEndPoint {
     #if DEBUG
     var shouldRequestStub: Bool {
         switch self {
-        case .listPhotos,
-             .listCollections,
+        case .listCollections,
              .searchPhotos,
              .searchCollections,
              .searchUsers:
             
             return false
+            
+        case .listPhotos:
+            return true
+        }
+    }
+    
+    var sampleData: Data {
+        switch self {
+        case .listCollections,
+             .searchPhotos,
+             .searchCollections,
+             .searchUsers:
+            
+            return Data()
+            
+        case .listPhotos:
+            return Mock.listPhotos.dataEncoded
         }
     }
     
