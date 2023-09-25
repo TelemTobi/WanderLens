@@ -9,7 +9,7 @@ import SwiftUI
 
 // TODO: Come up with a better coordinator pattern for SwiftUI ⚠️
 
-class AppCoordinator: Coordinator, MainScreenRouter {
+class AppCoordinator: Coordinator, MainScreenRouter, BrowseRouter {
     
     let window: UIWindow
     var interactor: Interactor
@@ -35,6 +35,15 @@ class AppCoordinator: Coordinator, MainScreenRouter {
     var mainScreenView: MainScreenView {
         let interactor = MainScreenInteractor(interactable: interactor)
         let view = MainScreenWireframe.makeView(interactor: interactor, router: self)
+        return view
+    }
+    
+    // MARK: - Browse
+    
+    @MainActor
+    var browseView: BrowseView {
+        let interactor = BrowseInteractor(interactable: interactor)
+        let view = BrowseWireframe.makeView(interactor: interactor, router: self)
         return view
     }
 }
