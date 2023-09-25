@@ -19,17 +19,20 @@ struct MainScreenView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            Text("Home")
-                .tabItem {
-                    Label("Home", systemImage: "house")
-                }
-            
-            Text("Browse")
+            presenter.browseView
+                .tag(0)
                 .tabItem {
                     Label("Browse", systemImage: "globe.americas")
                 }
             
+            Text("Categories")
+                .tag(1)
+                .tabItem {
+                    Label("Categories", systemImage: "photo.stack")
+                }
+            
             Text("Profile")
+                .tag(2)
                 .tabItem {
                     Label("Profile", systemImage: "person")
                 }

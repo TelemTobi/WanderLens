@@ -9,4 +9,5 @@ import Foundation
 
 protocol MainScreenRouter where Self: Coordinator {
     
+    var browseView: BrowseView { get }
 }

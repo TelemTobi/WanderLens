@@ -25,6 +25,6 @@ extension ListRequest {
     enum Order: String, Encodable {
         case latest
         case oldest
-        case popular
+        case popularity = "popular"
     }
 }
