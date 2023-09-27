@@ -68,6 +68,10 @@
 		7D638F432AC18F4C00C9D4AD /* BrowseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D638F3D2AC18E8B00C9D4AD /* BrowseInteractor.swift */; };
 		7D638F482AC1A4F300C9D4AD /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D638F472AC1A4F300C9D4AD /* Mocks.swift */; };
 		7D638F4B2AC1A76700C9D4AD /* ListPhotosStub.json in Resources */ = {isa = PBXBuildFile; fileRef = 7D638F492AC1A66C00C9D4AD /* ListPhotosStub.json */; };
+		7D638F512AC1B1A400C9D4AD /* DynamicVGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D638F502AC1B1A400C9D4AD /* DynamicVGrid.swift */; };
+		7D638F532AC1B26300C9D4AD /* DynamicHGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D638F522AC1B26300C9D4AD /* DynamicHGrid.swift */; };
+		7D638F552AC1B58E00C9D4AD /* UIImage+BlurHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D638F542AC1B58E00C9D4AD /* UIImage+BlurHash.swift */; };
+		7D638F582AC20DF400C9D4AD /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7D638F572AC20DF400C9D4AD /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -152,6 +156,9 @@
 		7D638F3E2AC18E8B00C9D4AD /* BrowseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseView.swift; sourceTree = "<group>"; };
 		7D638F472AC1A4F300C9D4AD /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		7D638F492AC1A66C00C9D4AD /* ListPhotosStub.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ListPhotosStub.json; sourceTree = "<group>"; };
+		7D638F502AC1B1A400C9D4AD /* DynamicVGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicVGrid.swift; sourceTree = "<group>"; };
+		7D638F522AC1B26300C9D4AD /* DynamicHGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicHGrid.swift; sourceTree = "<group>"; };
+		7D638F542AC1B58E00C9D4AD /* UIImage+BlurHash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+BlurHash.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D638F582AC20DF400C9D4AD /* SDWebImageSwiftUI in Frameworks */,
 				7D62E8232AB87946002AA24F /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +290,7 @@
 		7D62E7FA2AB87479002AA24F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7D638F4F2AC1B16F00C9D4AD /* Dynamic Grid */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -382,6 +391,7 @@
 			children = (
 				7D62E8092AB87479002AA24F /* UIWindow+Extension.swift */,
 				7D62E80A2AB87479002AA24F /* UINavigationController+Extension.swift */,
+				7D638F542AC1B58E00C9D4AD /* UIImage+BlurHash.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -514,6 +524,15 @@
 			path = Mock;
 			sourceTree = "<group>";
 		};
+		7D638F4F2AC1B16F00C9D4AD /* Dynamic Grid */ = {
+			isa = PBXGroup;
+			children = (
+				7D638F502AC1B1A400C9D4AD /* DynamicVGrid.swift */,
+				7D638F522AC1B26300C9D4AD /* DynamicHGrid.swift */,
+			);
+			path = "Dynamic Grid";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -532,6 +551,7 @@
 			name = WanderLens;
 			packageProductDependencies = (
 				7D62E8222AB87946002AA24F /* Moya */,
+				7D638F572AC20DF400C9D4AD /* SDWebImageSwiftUI */,
 			);
 			productName = WanderLens;
 			productReference = 7D62E7BC2AB78BCE002AA24F /* WanderLens.app */;
@@ -607,6 +627,7 @@
 			mainGroup = 7D62E7B32AB78BCE002AA24F;
 			packageReferences = (
 				7D62E8212AB87946002AA24F /* XCRemoteSwiftPackageReference "Moya" */,
+				7D638F562AC20DF400C9D4AD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 7D62E7BD2AB78BCE002AA24F /* Products */;
 			projectDirPath = "";
@@ -656,6 +677,7 @@
 				7D62E84B2ABB2335002AA24F /* SearchRequest.swift in Sources */,
 				7D62E83E2AB87F1C002AA24F /* Data+Extension.swift in Sources */,
 				7D62E84F2ABB2A0C002AA24F /* Encodable+Extension.swift in Sources */,
+				7D638F552AC1B58E00C9D4AD /* UIImage+BlurHash.swift in Sources */,
 				7D638F432AC18F4C00C9D4AD /* BrowseInteractor.swift in Sources */,
 				7D62E7C22AB78BCE002AA24F /* MainScreenView.swift in Sources */,
 				7D62E8322AB87C54002AA24F /* PredefinedError.swift in Sources */,
@@ -667,6 +689,7 @@
 				7D62E8592ABC7F87002AA24F /* MainScreenPresenter.swift in Sources */,
 				7D62E85F2ABC8805002AA24F /* OnFirstAppear.swift in Sources */,
 				7D62E8302AB87C2E002AA24F /* Errorable.swift in Sources */,
+				7D638F512AC1B1A400C9D4AD /* DynamicVGrid.swift in Sources */,
 				7D62E8392AB87EB4002AA24F /* Error+Extension.swift in Sources */,
 				7D638F3F2AC18F4100C9D4AD /* BrowseView.swift in Sources */,
 				7D62E8142AB87479002AA24F /* UINavigationController+Extension.swift in Sources */,
@@ -698,6 +721,7 @@
 				7D638F382AC0C92000C9D4AD /* Array+Extension.swift in Sources */,
 				7D62E81C2AB875BD002AA24F /* AppCoordinator.swift in Sources */,
 				7D62E8532ABB2AEB002AA24F /* CollectionsSearchResponse.swift in Sources */,
+				7D638F532AC1B26300C9D4AD /* DynamicHGrid.swift in Sources */,
 				7D62E7F72AB8745C002AA24F /* AppController.swift in Sources */,
 				7D62E8402ABB17DD002AA24F /* Configurations.swift in Sources */,
 				7D638F302AC05BE900C9D4AD /* Photo.swift in Sources */,
@@ -1066,6 +1090,14 @@
 				minimumVersion = 15.0.0;
 			};
 		};
+		7D638F562AC20DF400C9D4AD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1073,6 +1105,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7D62E8212AB87946002AA24F /* XCRemoteSwiftPackageReference "Moya" */;
 			productName = Moya;
+		};
+		7D638F572AC20DF400C9D4AD /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D638F562AC20DF400C9D4AD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

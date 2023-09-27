@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Photo: Decodable, JsonResolver {
+struct Photo: Decodable, JsonResolver, Identifiable {
     
     let id: String?
     let creationDate: Date?
@@ -20,6 +20,10 @@ struct Photo: Decodable, JsonResolver {
     let user: User?
     let urls: Urls?
     let links: Links?
+    
+    var ratio: Double {
+         (width ?? 1) / (height ?? 1)
+    }
     
     enum CodingKeys: String, CodingKey {
         case id
