@@ -16,10 +16,6 @@ struct WanderLensApp: App {
     var body: some Scene {
         WindowGroup {
             appController.rootView
-                .onFirstAppear {
-                    SDImageCache.shared.clearMemory()
-                    SDImageCache.shared.clearDisk()
-                }
         }
     }
 }

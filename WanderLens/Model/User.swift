@@ -61,3 +61,30 @@ extension User {
         }
     }
 }
+
+#if DEBUG
+extension User {
+    static let mock: User = .init(
+        id: "J4_bsR1axWg",
+        username: "turner_imagery",
+        name: "Will Turner",
+        bio: "Just a man with a camera.\r\n\r\nCheck out my instagram @turner_imagery",
+        location: "",
+        likeCount: 23,
+        photoCount: 94,
+        collectionCount: 3,
+        profileImage: .init(
+            small: "https://images.unsplash.com/profile-1515991318621-20a8557885ed?ixlib=rb-4.0.3&crop=faces&fit=crop&w=32&h=32",
+            medium: "https://images.unsplash.com/profile-1515991318621-20a8557885ed?ixlib=rb-4.0.3&crop=faces&fit=crop&w=64&h=64",
+            large: "https://images.unsplash.com/profile-1515991318621-20a8557885ed?ixlib=rb-4.0.3&crop=faces&fit=crop&w=128&h=128"),
+        links: .init(
+            html: "https://unsplash.com/@turner_imagery",
+            photos: "https://api.unsplash.com/users/turner_imagery/photos",
+            likes: "https://api.unsplash.com/users/turner_imagery/likes",
+            portfolio: "https://api.unsplash.com/users/turner_imagery/portfolio"),
+        social: .init(
+            instagramUsername: "turner_imagery",
+            twitterUsername: nil)
+    )
+}
+#endif

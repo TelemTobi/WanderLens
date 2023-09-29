@@ -41,12 +41,9 @@ struct MainScreenView: View {
     }
 }
 
-struct MainScreenView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        let interactor = MainScreenInteractor(interactable: AppController.Preview.interactor)
-        let presenter = MainScreenPresenter(interactor: interactor, router: nil)
-        
-        MainScreenView(presenter: presenter)
-    }
+#Preview {
+    let interactor = MainScreenInteractor(interactable: AppController.Preview.interactor)
+    let presenter = MainScreenPresenter(interactor: interactor, router: nil)
+
+    return MainScreenView(presenter: presenter)
 }
