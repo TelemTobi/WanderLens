@@ -25,6 +25,9 @@ class BrowsePresenter: ObservableObject {
     private let interactor: BrowseInteractable
     private weak var router: BrowseRouter?
     
+    var locationSuggestions: [String] { interactor.locationSuggestions }
+    var styleSuggestions: [String] { interactor.styleSuggestions }
+    
     // MARK: - Initialiser
     
     init(interactor: BrowseInteractable, router: BrowseRouter?) {

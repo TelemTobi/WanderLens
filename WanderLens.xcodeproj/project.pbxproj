@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D38130B2AC70CE100C98302 /* TagCloudsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38130A2AC70CE100C98302 /* TagCloudsView.swift */; };
+		7D38130E2AC70E7A00C98302 /* TagButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38130D2AC70E7A00C98302 /* TagButtonStyle.swift */; };
 		7D455F2D2AC6CAA600F139F9 /* BrowseConentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D455F2C2AC6CAA600F139F9 /* BrowseConentView.swift */; };
 		7D455F2F2AC6CB0D00F139F9 /* BrowseSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D455F2E2AC6CB0D00F139F9 /* BrowseSearchView.swift */; };
 		7D455F312AC6CB1800F139F9 /* BrowseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D455F302AC6CB1800F139F9 /* BrowseListView.swift */; };
@@ -96,6 +98,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D38130A2AC70CE100C98302 /* TagCloudsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCloudsView.swift; sourceTree = "<group>"; };
+		7D38130D2AC70E7A00C98302 /* TagButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButtonStyle.swift; sourceTree = "<group>"; };
 		7D455F2C2AC6CAA600F139F9 /* BrowseConentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseConentView.swift; sourceTree = "<group>"; };
 		7D455F2E2AC6CB0D00F139F9 /* BrowseSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseSearchView.swift; sourceTree = "<group>"; };
 		7D455F302AC6CB1800F139F9 /* BrowseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseListView.swift; sourceTree = "<group>"; };
@@ -196,6 +200,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D3813092AC70CE100C98302 /* Tag Clouds */ = {
+			isa = PBXGroup;
+			children = (
+				7D38130A2AC70CE100C98302 /* TagCloudsView.swift */,
+			);
+			path = "Tag Clouds";
+			sourceTree = "<group>";
+		};
+		7D38130C2AC70E5C00C98302 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				7D38130D2AC70E7A00C98302 /* TagButtonStyle.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
 		7D455F2B2AC6CA8C00F139F9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				7D638F4F2AC1B16F00C9D4AD /* Dynamic Grid */,
+				7D3813092AC70CE100C98302 /* Tag Clouds */,
 				7D455F322AC6FF0900F139F9 /* PhotoListItem.swift */,
 			);
 			path = View;
@@ -389,7 +410,7 @@
 			children = (
 				7D62E8072AB87479002AA24F /* Extensions */,
 				7D62E80E2AB87479002AA24F /* Protocols */,
-				7D62E80F2AB87479002AA24F /* View Modifiers */,
+				7D62E80F2AB87479002AA24F /* Modifiers */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -443,12 +464,13 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
-		7D62E80F2AB87479002AA24F /* View Modifiers */ = {
+		7D62E80F2AB87479002AA24F /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
 				7D62E85E2ABC8805002AA24F /* OnFirstAppear.swift */,
+				7D38130C2AC70E5C00C98302 /* Styles */,
 			);
-			path = "View Modifiers";
+			path = Modifiers;
 			sourceTree = "<group>";
 		};
 		7D62E8182AB87556002AA24F /* Coordinator */ = {
@@ -703,6 +725,7 @@
 				7D62E8322AB87C54002AA24F /* PredefinedError.swift in Sources */,
 				7D62E8132AB87479002AA24F /* UIWindow+Extension.swift in Sources */,
 				7D62E8432ABB1838002AA24F /* UnsplashAuthenticator.swift in Sources */,
+				7D38130B2AC70CE100C98302 /* TagCloudsView.swift in Sources */,
 				7D62E8462ABB20B5002AA24F /* UnsplashEndpoints.swift in Sources */,
 				7D62E8202AB878D5002AA24F /* Networking.swift in Sources */,
 				7D62E8482ABB20BF002AA24F /* UnsplashDataProvider.swift in Sources */,
@@ -717,6 +740,7 @@
 				7D62E7F62AB8745C002AA24F /* Services.swift in Sources */,
 				7D62E7C02AB78BCE002AA24F /* WanderLensApp.swift in Sources */,
 				7D62E8352AB87C87002AA24F /* JsonResolver.swift in Sources */,
+				7D38130E2AC70E7A00C98302 /* TagButtonStyle.swift in Sources */,
 				7D455F332AC6FF0900F139F9 /* PhotoListItem.swift in Sources */,
 				7D638F482AC1A4F300C9D4AD /* Mocks.swift in Sources */,
 				7D62E8572ABC7F7E002AA24F /* MainScreenInteractor.swift in Sources */,

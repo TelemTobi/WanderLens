@@ -12,7 +12,6 @@ struct BrowseView: View {
     @ObservedObject private var presenter: BrowsePresenter
     
     @State private var isMapShowing: Bool = false
-    @State private var searchQuery: String = ""
     
     init(presenter: BrowsePresenter) {
         self.presenter = presenter
@@ -27,17 +26,14 @@ struct BrowseView: View {
                     
                 case .loaded(let photos):
                     ContentView(photos: photos)
-                        .searchable(
-                            text: $searchQuery,
-                            placement: .navigationBarDrawer,
-                            prompt: "What are you looking for..?"
-                        )
+                        .environmentObject(presenter)
                     
                 case .error(let message):
                     Text(message ?? "An error occured")
                 }
             }
             .navigationTitle("Browse")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar(content: toolbarContent)
         }
         .onFirstAppear(perform: presenter.onFirstAppear)

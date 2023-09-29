@@ -12,7 +12,7 @@ struct DynamicVGrid: Layout {
     private var columns: Int
     private var spacing: Double
 
-    init(columns: Int = 2, spacing: Double = 8.0) {
+    init(columns: Int = 2, spacing: Double = 10) {
         self.columns = columns
         self.spacing = spacing
     }

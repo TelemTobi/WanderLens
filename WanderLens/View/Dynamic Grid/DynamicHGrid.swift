@@ -12,7 +12,7 @@ struct DynamicHGrid: Layout {
     private var rows: Int
     private var spacing: Double
 
-    init(rows: Int = 2, spacing: Double = 8.0) {
+    init(rows: Int = 2, spacing: Double = 10) {
         self.rows = rows
         self.spacing = spacing
     }
