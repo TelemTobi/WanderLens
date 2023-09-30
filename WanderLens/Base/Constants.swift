@@ -29,6 +29,11 @@ typealias UsersSearchCompletion = (UsersSearchResponse?, Errorable?) -> Void
 
 enum Constants {
     
+    enum Notification {
+        static let photoSaveSucceeded = Foundation.Notification.Name("PhotoSaveSucceeded")
+        static let photoSaveFailed = Foundation.Notification.Name("PhotoSaveFailed")
+    }
+    
     enum TimeInterval {
         static let stubDelay: Double = 0.2
     }

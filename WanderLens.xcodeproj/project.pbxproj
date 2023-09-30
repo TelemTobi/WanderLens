@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		7D38130B2AC70CE100C98302 /* TagCloudsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38130A2AC70CE100C98302 /* TagCloudsView.swift */; };
 		7D38130E2AC70E7A00C98302 /* TagButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38130D2AC70E7A00C98302 /* TagButtonStyle.swift */; };
+		7D3813132AC8599100C98302 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 7D3813122AC8599100C98302 /* AlertToast */; };
+		7D3813162AC85ABC00C98302 /* AlertType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3813152AC85ABC00C98302 /* AlertType.swift */; };
+		7D3813182AC85D4B00C98302 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3813172AC85D4B00C98302 /* Alert.swift */; };
+		7D38131B2AC8680B00C98302 /* PhotosService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38131A2AC8680B00C98302 /* PhotosService.swift */; };
 		7D455F2D2AC6CAA600F139F9 /* BrowseConentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D455F2C2AC6CAA600F139F9 /* BrowseConentView.swift */; };
 		7D455F2F2AC6CB0D00F139F9 /* BrowseSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D455F2E2AC6CB0D00F139F9 /* BrowseSearchView.swift */; };
 		7D455F312AC6CB1800F139F9 /* BrowseListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D455F302AC6CB1800F139F9 /* BrowseListView.swift */; };
@@ -100,6 +104,9 @@
 /* Begin PBXFileReference section */
 		7D38130A2AC70CE100C98302 /* TagCloudsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCloudsView.swift; sourceTree = "<group>"; };
 		7D38130D2AC70E7A00C98302 /* TagButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButtonStyle.swift; sourceTree = "<group>"; };
+		7D3813152AC85ABC00C98302 /* AlertType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertType.swift; sourceTree = "<group>"; };
+		7D3813172AC85D4B00C98302 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		7D38131A2AC8680B00C98302 /* PhotosService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosService.swift; sourceTree = "<group>"; };
 		7D455F2C2AC6CAA600F139F9 /* BrowseConentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseConentView.swift; sourceTree = "<group>"; };
 		7D455F2E2AC6CB0D00F139F9 /* BrowseSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseSearchView.swift; sourceTree = "<group>"; };
 		7D455F302AC6CB1800F139F9 /* BrowseListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseListView.swift; sourceTree = "<group>"; };
@@ -178,6 +185,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D3813132AC8599100C98302 /* AlertToast in Frameworks */,
 				7D638F582AC20DF400C9D4AD /* SDWebImageSwiftUI in Frameworks */,
 				7D62E8232AB87946002AA24F /* Moya in Frameworks */,
 			);
@@ -214,6 +222,22 @@
 				7D38130D2AC70E7A00C98302 /* TagButtonStyle.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		7D3813142AC85AAE00C98302 /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				7D3813152AC85ABC00C98302 /* AlertType.swift */,
+			);
+			path = Alerts;
+			sourceTree = "<group>";
+		};
+		7D3813192AC867ED00C98302 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7D38131A2AC8680B00C98302 /* PhotosService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		7D455F2B2AC6CA8C00F139F9 /* Views */ = {
@@ -253,6 +277,7 @@
 				7D62E7F92AB87472002AA24F /* Model */,
 				7D62E7EB2AB8743E002AA24F /* Modules */,
 				7D62E7FB2AB87479002AA24F /* Networking */,
+				7D3813192AC867ED00C98302 /* Services */,
 				7D62E7FE2AB87479002AA24F /* Support */,
 				7D62E8062AB87479002AA24F /* Utility */,
 				7D62E7FA2AB87479002AA24F /* View */,
@@ -329,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				7D455F322AC6FF0900F139F9 /* PhotoListItem.swift */,
+				7D3813142AC85AAE00C98302 /* Alerts */,
 				7D638F4F2AC1B16F00C9D4AD /* Dynamic Grid */,
 				7D3813092AC70CE100C98302 /* Tag Clouds */,
 			);
@@ -467,6 +493,7 @@
 		7D62E80F2AB87479002AA24F /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
+				7D3813172AC85D4B00C98302 /* Alert.swift */,
 				7D62E85E2ABC8805002AA24F /* OnFirstAppear.swift */,
 				7D38130C2AC70E5C00C98302 /* Styles */,
 			);
@@ -594,6 +621,7 @@
 			packageProductDependencies = (
 				7D62E8222AB87946002AA24F /* Moya */,
 				7D638F572AC20DF400C9D4AD /* SDWebImageSwiftUI */,
+				7D3813122AC8599100C98302 /* AlertToast */,
 			);
 			productName = WanderLens;
 			productReference = 7D62E7BC2AB78BCE002AA24F /* WanderLens.app */;
@@ -670,6 +698,7 @@
 			packageReferences = (
 				7D62E8212AB87946002AA24F /* XCRemoteSwiftPackageReference "Moya" */,
 				7D638F562AC20DF400C9D4AD /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				7D3813112AC8599100C98302 /* XCRemoteSwiftPackageReference "AlertToast" */,
 			);
 			productRefGroup = 7D62E7BD2AB78BCE002AA24F /* Products */;
 			projectDirPath = "";
@@ -718,6 +747,7 @@
 				7D638F322AC05BF200C9D4AD /* PhotoCollection.swift in Sources */,
 				7D62E84B2ABB2335002AA24F /* SearchRequest.swift in Sources */,
 				7D62E83E2AB87F1C002AA24F /* Data+Extension.swift in Sources */,
+				7D3813162AC85ABC00C98302 /* AlertType.swift in Sources */,
 				7D62E84F2ABB2A0C002AA24F /* Encodable+Extension.swift in Sources */,
 				7D638F552AC1B58E00C9D4AD /* UIImage+BlurHash.swift in Sources */,
 				7D638F432AC18F4C00C9D4AD /* BrowseInteractor.swift in Sources */,
@@ -731,6 +761,7 @@
 				7D62E8482ABB20BF002AA24F /* UnsplashDataProvider.swift in Sources */,
 				7D62E8592ABC7F87002AA24F /* MainScreenPresenter.swift in Sources */,
 				7D62E85F2ABC8805002AA24F /* OnFirstAppear.swift in Sources */,
+				7D3813182AC85D4B00C98302 /* Alert.swift in Sources */,
 				7D62E8302AB87C2E002AA24F /* Errorable.swift in Sources */,
 				7D638F512AC1B1A400C9D4AD /* DynamicVGrid.swift in Sources */,
 				7D62E8392AB87EB4002AA24F /* Error+Extension.swift in Sources */,
@@ -753,6 +784,7 @@
 				7D62E81A2AB87565002AA24F /* Coordinator.swift in Sources */,
 				7D455F2F2AC6CB0D00F139F9 /* BrowseSearchView.swift in Sources */,
 				7D62E85B2ABC7F8F002AA24F /* MainScreenRouter.swift in Sources */,
+				7D38131B2AC8680B00C98302 /* PhotosService.swift in Sources */,
 				7D638F2E2AC058FC00C9D4AD /* ListRequest.swift in Sources */,
 				7D638F362AC0C77000C9D4AD /* GenericModelList.swift in Sources */,
 				7D62E8102AB87479002AA24F /* DataProviders.swift in Sources */,
@@ -935,6 +967,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "In order to save photos to the gallery";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -973,6 +1006,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "In order to save photos to the gallery";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -1130,6 +1164,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7D3813112AC8599100C98302 /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.9;
+			};
+		};
 		7D62E8212AB87946002AA24F /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -1149,6 +1191,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7D3813122AC8599100C98302 /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D3813112AC8599100C98302 /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
 		7D62E8222AB87946002AA24F /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7D62E8212AB87946002AA24F /* XCRemoteSwiftPackageReference "Moya" */;

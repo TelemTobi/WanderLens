@@ -8,57 +8,43 @@
 import SwiftUI
 import SDWebImageSwiftUI
 
+protocol PhotoListItemDelegate: AnyObject {
+    func savePhoto(_ photo: Photo)
+}
+
 struct PhotoListItem: View {
     
     let photo: Photo
-    let isLargeView: Bool
+    weak var delegate: PhotoListItemDelegate?
     
     var body: some View {
-        ZStack(alignment: .bottomLeading) {
-            WebImage(url: URL(string: photo.urls?.regular ?? ""))
-                .resizable()
-                .placeholder {
-                    Image(uiImage: .init(
-                        blurHash: photo.blurHash ?? "",
-                        size: .init(width: 4, height: 3)) ??
-                        .init(systemName: "photo")!
-                    )
-                    .resizable()
-                }
-                .transition(.fade(duration: 0.2))
-                .aspectRatio(photo.ratio, contentMode: .fit)
-                .cornerRadius(5)
-            
-            ZStack(alignment: .bottom) {
-                
-                
-                HStack {
-                    Label(photo.user?.location ?? "Unknown", systemImage: "mappin.circle")
-                        .lineLimit(1)
-                        .fontWeight(.medium)
-                        .foregroundColor(.white)
-                    
-                    Spacer()
-                    
-                    Label((photo.likes ?? 0).description, systemImage: "heart")
-                        .lineLimit(1)
-                        .fontWeight(.medium)
-                        .foregroundColor(.white)
-                }
-                .padding()
-                .background(
-                    LinearGradient(
-                        colors: [.clear, .black.opacity(0.2)],
-                        startPoint: .top,
-                        endPoint: .bottom
-                    )
+        WebImage(url: URL(string: photo.urls?.regular ?? ""))
+            .resizable()
+            .placeholder {
+                Image(uiImage: .init(
+                    blurHash: photo.blurHash ?? "",
+                    size: .init(width: 4, height: 3)) ??
+                    .init(systemName: "photo")!
                 )
+                .resizable()
             }
-            .opacity(isLargeView ? 1 : 0)
-        }
+            .transition(.fade(duration: 0.2))
+            .aspectRatio(photo.ratio, contentMode: .fit)
+            .cornerRadius(5)
+            .contextMenu(menuItems: {
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Label("Like", systemImage: "heart")
+                }
+                Button(action: { delegate?.savePhoto(photo) }) {
+                    Label("Save", systemImage: "arrowshape.down")
+                }
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                    Label("More Details", systemImage: "info.circle")
+                }
+            })
     }
 }
 
 #Preview {
-    PhotoListItem(photo: .mock, isLargeView: true)
+    PhotoListItem(photo: .mock, delegate: nil)
 }

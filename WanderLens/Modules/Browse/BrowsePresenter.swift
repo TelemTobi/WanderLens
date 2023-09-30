@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 @MainActor
 class BrowsePresenter: ObservableObject {
@@ -19,11 +20,15 @@ class BrowsePresenter: ObservableObject {
     // MARK: -  Published Properties
     
     @Published var state: State = .loading
+    @Published var alert: AlertType?
     
     // MARK: - Properties
     
     private let interactor: BrowseInteractable
     private weak var router: BrowseRouter?
+    private var subscriptions: Set<AnyCancellable> = []
+    
+    // MARK: - Proxies
     
     var locationSuggestions: [String] { interactor.locationSuggestions }
     var styleSuggestions: [String] { interactor.styleSuggestions }
@@ -38,10 +43,27 @@ class BrowsePresenter: ObservableObject {
     // MARK: - Methods
     
     func onFirstAppear() {
+        initSubscriptions()
         fetchPhotos()
     }
     
     // MARK: - Private Methods
+    
+    private func initSubscriptions() {
+        NotificationCenter.default
+            .publisher(for: Constants.Notification.photoSaveSucceeded)
+            .sink { [weak self] notification in
+                self?.alert = .photoSaveSucceeded
+            }
+            .store(in: &subscriptions)
+        
+        NotificationCenter.default
+            .publisher(for: Constants.Notification.photoSaveFailed)
+            .sink { [weak self] notification in
+                self?.alert = .photoSaveFailed
+            }
+            .store(in: &subscriptions)
+    }
     
     private func fetchPhotos() {
         interactor.listPhotos(page: 0, orderedBy: .popularity) { [weak self] photos, error in
@@ -54,5 +76,17 @@ class BrowsePresenter: ObservableObject {
             
             state = .loaded(photos: photos)
         }
+    }
+}
+
+extension BrowsePresenter: PhotoListItemDelegate {
+    
+    func savePhoto(_ photo: Photo) {
+        guard let imageUrl = URL(string: photo.urls?.full ?? "") else {
+            alert = .photoSaveFailed
+            return
+        }
+        
+        interactor.saveImage(from: imageUrl)
     }
 }

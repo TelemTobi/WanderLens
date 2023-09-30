@@ -35,6 +35,7 @@ struct BrowseView: View {
             .toolbar(content: toolbarContent)
         }
         .onFirstAppear(perform: presenter.onFirstAppear)
+        .alert(type: $presenter.alert)
     }
     
     @ToolbarContentBuilder
@@ -43,7 +44,7 @@ struct BrowseView: View {
             Button {
 
             } label: {
-                Image(systemName: "eyes")
+                Image(systemName: "heart.text.square")
                     .foregroundColor(.accentColor)
             }
         }

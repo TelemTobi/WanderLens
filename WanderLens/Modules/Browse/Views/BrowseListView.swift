@@ -13,6 +13,8 @@ extension BrowseView {
         
         let photos: [Photo]
         
+        @EnvironmentObject private var presenter: BrowsePresenter
+        
         @State private var numberOfColumns: Int = 2
         @State private var currentScale: CGFloat = 1.0
         
@@ -20,7 +22,7 @@ extension BrowseView {
             ScrollView(showsIndicators: false) {
                 DynamicVGrid(columns: numberOfColumns) {
                     ForEach(photos) { photo in
-                        PhotoListItem(photo: photo, isLargeView: numberOfColumns == 1)
+                        PhotoListItem(photo: photo, delegate: presenter)
                     }
                 }
                 .padding()
