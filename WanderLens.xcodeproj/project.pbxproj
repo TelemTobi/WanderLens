@@ -328,9 +328,9 @@
 		7D62E7FA2AB87479002AA24F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7D455F322AC6FF0900F139F9 /* PhotoListItem.swift */,
 				7D638F4F2AC1B16F00C9D4AD /* Dynamic Grid */,
 				7D3813092AC70CE100C98302 /* Tag Clouds */,
-				7D455F322AC6FF0900F139F9 /* PhotoListItem.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

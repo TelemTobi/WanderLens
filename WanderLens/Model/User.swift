@@ -69,7 +69,7 @@ extension User {
         username: "turner_imagery",
         name: "Will Turner",
         bio: "Just a man with a camera.\r\n\r\nCheck out my instagram @turner_imagery",
-        location: "",
+        location: "Tel Aviv, Israel",
         likeCount: 23,
         photoCount: 94,
         collectionCount: 3,

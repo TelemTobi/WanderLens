@@ -11,8 +11,6 @@ struct BrowseView: View {
     
     @ObservedObject private var presenter: BrowsePresenter
     
-    @State private var isMapShowing: Bool = false
-    
     init(presenter: BrowsePresenter) {
         self.presenter = presenter
     }
@@ -43,9 +41,9 @@ struct BrowseView: View {
     private func toolbarContent() -> some ToolbarContent {
         ToolbarItem(placement: .navigationBarTrailing) {
             Button {
-                isMapShowing.toggle()
+
             } label: {
-                Image(systemName: isMapShowing ? "square.grid.2x2" : "map")
+                Image(systemName: "eyes")
                     .foregroundColor(.accentColor)
             }
         }
