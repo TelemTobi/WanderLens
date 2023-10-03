@@ -30,12 +30,6 @@ struct MainScreenView: View {
                 .tabItem {
                     Label("Categories", systemImage: "photo.stack")
                 }
-            
-            Text("Profile")
-                .tag(2)
-                .tabItem {
-                    Label("Profile", systemImage: "person")
-                }
         }
         .onFirstAppear(perform: presenter.onFirstAppear)
     }

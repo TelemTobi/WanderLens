@@ -46,5 +46,5 @@ struct PhotoListItem: View {
 }
 
 #Preview {
-    PhotoListItem(photo: .mock, delegate: nil)
+    PhotoListItem(photo: .mock[0], delegate: nil)
 }

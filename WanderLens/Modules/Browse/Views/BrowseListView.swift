@@ -45,5 +45,5 @@ extension BrowseView {
 }
 
 #Preview {
-    BrowseView.ListView(photos: Array(repeating: Photo.mock, count: 10))
+    BrowseView.ListView(photos: Photo.mock)
 }
