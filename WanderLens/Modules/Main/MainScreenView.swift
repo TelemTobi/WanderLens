@@ -25,10 +25,10 @@ struct MainScreenView: View {
                     Label("Browse", systemImage: "globe.americas")
                 }
             
-            Text("Categories")
+            presenter.collectionsView
                 .tag(1)
                 .tabItem {
-                    Label("Categories", systemImage: "photo.stack")
+                    Label("Collections", systemImage: "photo.stack")
                 }
         }
         .onFirstAppear(perform: presenter.onFirstAppear)

@@ -1,5 +1,5 @@
 //
-//  CategoriesView.swift
+//  CollectionsView.swift
 //  WanderLens
 //
 //  Created by Telem Tobi on 03/10/2023.
@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct CategoriesView: View {
+struct CollectionsView: View {
     
-    @ObservedObject private var presenter: CategoriesPresenter
+    @ObservedObject private var presenter: CollectionsPresenter
     
-    init(presenter: CategoriesPresenter) {
+    init(presenter: CollectionsPresenter) {
         self.presenter = presenter
     }
     
@@ -29,7 +29,7 @@ struct CategoriesView: View {
                     Text(message ?? "An error occured")
                 }
             }
-            .navigationTitle("Categories")
+            .navigationTitle("Collections")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar(content: toolbarContent)
         }
@@ -51,8 +51,8 @@ struct CategoriesView: View {
 }
 
 #Preview {
-    let interactor = CategoriesInteractor(interactable: AppController.Preview.interactor)
-    let presenter = CategoriesPresenter(interactor: interactor, router: nil)
+    let interactor = CollectionsInteractor(interactable: AppController.Preview.interactor)
+    let presenter = CollectionsPresenter(interactor: interactor, router: nil)
     
-    return CategoriesView(presenter: presenter)
+    return CollectionsView(presenter: presenter)
 }

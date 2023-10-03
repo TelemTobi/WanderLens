@@ -15,9 +15,10 @@ class MainScreenPresenter: ObservableObject {
     private let interactor: MainScreenInteractable
     private weak var router: MainScreenRouter?
 
-    var browseView: BrowseView? {
-        router?.browseView
-    }
+    // MARK: - Proxies
+    
+    var browseView: BrowseView? { router?.browseView }
+    var collectionsView: CollectionsView? { router?.collectionsView }
     
     // MARK: - Initialiser
     

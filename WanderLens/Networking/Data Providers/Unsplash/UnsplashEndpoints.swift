@@ -38,7 +38,6 @@ extension UnsplashEndPoints: TargetTypeEndPoint {
              .searchPhotos,
              .searchCollections,
              .searchUsers:
-            
             return .get
         }
     }
@@ -67,7 +66,6 @@ extension UnsplashEndPoints: TargetTypeEndPoint {
              .searchPhotos,
              .searchCollections,
              .searchUsers:
-            
             return nil
         }
     }
@@ -79,7 +77,6 @@ extension UnsplashEndPoints: TargetTypeEndPoint {
              .searchPhotos,
              .searchCollections,
              .searchUsers:
-            
             return .useDefaultKeys
         }
     }
@@ -91,7 +88,6 @@ extension UnsplashEndPoints: TargetTypeEndPoint {
              .searchPhotos,
              .searchCollections,
              .searchUsers:
-            
             return .iso8601
         }
     }
@@ -99,29 +95,29 @@ extension UnsplashEndPoints: TargetTypeEndPoint {
     #if DEBUG
     var shouldRequestStub: Bool {
         switch self {
-        case .listCollections,
-             .searchPhotos,
+        case .searchPhotos,
              .searchCollections,
              .searchUsers:
-            
             return false
             
-        case .listPhotos:
+        case .listPhotos,
+             .listCollections:
             return true
         }
     }
     
     var sampleData: Data {
         switch self {
-        case .listCollections,
-             .searchPhotos,
+        case .searchPhotos,
              .searchCollections,
              .searchUsers:
-            
             return Data()
             
         case .listPhotos:
             return Mock.listPhotos.dataEncoded
+            
+        case .listCollections:
+            return Mock.listCollections.dataEncoded
         }
     }
     
@@ -132,7 +128,6 @@ extension UnsplashEndPoints: TargetTypeEndPoint {
              .searchPhotos,
              .searchCollections,
              .searchUsers:
-            
             return true
         }
     }

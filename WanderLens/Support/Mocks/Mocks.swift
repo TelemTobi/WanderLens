@@ -11,6 +11,7 @@ import Foundation
 enum Mock: String {
     
     case listPhotos = "ListPhotosStub"
+    case listCollections = "ListCollectionsStub"
     
     var fileName: String {
         switch self {
