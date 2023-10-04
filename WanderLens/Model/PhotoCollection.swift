@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct PhotoCollection: Decodable, JsonResolver {
+struct PhotoCollection: Decodable, JsonResolver, Identifiable {
     
     let id: String?
     let title: String?
@@ -15,6 +15,7 @@ struct PhotoCollection: Decodable, JsonResolver {
     let creationDate: Date?
     let photosCount: Int?
     let coverPhoto: Photo?
+    let previewPhotos: [Photo]?
     let user: User?
     let links: Links?
     
@@ -24,7 +25,8 @@ struct PhotoCollection: Decodable, JsonResolver {
         case description
         case creationDate = "published_at"
         case photosCount = "total_photos"
-        case coverPhoto
+        case coverPhoto = "cover_photo"
+        case previewPhotos = "preview_photos"
         case user
         case links
     }
@@ -38,3 +40,12 @@ extension PhotoCollection {
         let related: String?
     }
 }
+
+#if DEBUG
+extension PhotoCollection {
+    
+    static let mock: [PhotoCollection] = {
+        try! JSONDecoder().decode([PhotoCollection].self, from: Mock.listCollections.dataEncoded)
+    }()
+}
+#endif

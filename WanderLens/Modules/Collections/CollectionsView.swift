@@ -22,8 +22,9 @@ struct CollectionsView: View {
                 case .loading:
                     ProgressView()
                     
-                case .loaded(let categpories):
-                    EmptyView()
+                case .loaded(let collections):
+                    ContentView(collections: collections)
+                        .environmentObject(presenter)
                     
                 case .error(let message):
                     Text(message ?? "An error occured")

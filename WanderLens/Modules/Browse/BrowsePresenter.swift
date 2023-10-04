@@ -30,8 +30,6 @@ class BrowsePresenter: ObservableObject {
     
     // MARK: - Proxies
     
-    var locationSuggestions: [String] { interactor.locationSuggestions }
-    var styleSuggestions: [String] { interactor.styleSuggestions }
     
     // MARK: - Initialiser
     

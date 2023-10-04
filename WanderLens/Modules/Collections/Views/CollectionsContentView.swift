@@ -1,19 +1,19 @@
 //
-//  BrowseConentView.swift
+//  CollectionsContentView.swift
 //  WanderLens
 //
-//  Created by Telem Tobi on 29/09/2023.
+//  Created by Telem Tobi on 04/10/2023.
 //
 
 import SwiftUI
 
-extension BrowseView {
+extension CollectionsView {
     
     struct ContentView: View {
         
-        let photos: [Photo]
+        let collections: [PhotoCollection]
 
-        @EnvironmentObject private var presenter: BrowsePresenter
+        @EnvironmentObject private var presenter: CollectionsPresenter
         
         @State private var isSearching: Bool = false
         @State private var searchQuery: String = ""
@@ -24,7 +24,7 @@ extension BrowseView {
                 if isSearching {
                     SearchView(didFirstAppear: $didShowSearchView)
                 } else {
-                    ListView(photos: photos)
+                    ListView(collections: collections)
                 }
             }
             .searchable(
@@ -34,8 +34,4 @@ extension BrowseView {
             )
         }
     }
-}
-
-#Preview {
-    BrowseView.ContentView(photos: [])
 }
