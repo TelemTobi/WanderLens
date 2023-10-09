@@ -1,5 +1,5 @@
 //
-//  BrowseView.swift
+//  FeedView.swift
 //  WanderLens
 //
 //  Created by Telem Tobi on 25/09/2023.
@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct BrowseView: View {
+struct FeedView: View {
     
-    @ObservedObject private var presenter: BrowsePresenter
+    @ObservedObject private var presenter: FeedPresenter
     
-    init(presenter: BrowsePresenter) {
+    init(presenter: FeedPresenter) {
         self.presenter = presenter
     }
     
@@ -30,7 +30,7 @@ struct BrowseView: View {
                     Text(message ?? "An error occured")
                 }
             }
-            .navigationTitle("Browse")
+            .navigationTitle("Feed")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar(content: toolbarContent)
         }
@@ -52,8 +52,8 @@ struct BrowseView: View {
 }
 
 #Preview {
-    let interactor = BrowseInteractor(interactable: AppController.Preview.interactor)
-    let presenter = BrowsePresenter(interactor: interactor, router: nil)
+    let interactor = FeedInteractor(interactable: AppController.Preview.interactor)
+    let presenter = FeedPresenter(interactor: interactor, router: nil)
     
-    return BrowseView(presenter: presenter)
+    return FeedView(presenter: presenter)
 }

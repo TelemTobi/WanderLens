@@ -1,5 +1,5 @@
 //
-//  SuggestionsView.swift
+//  SearchSuggestionsView.swift
 //  WanderLens
 //
 //  Created by Telem Tobi on 09/10/2023.
@@ -19,14 +19,14 @@ extension SearchView {
             ScrollView {
                 VStack(alignment: .leading, spacing: 10) {
                     Text("Locations")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
+                        .font(.title)
+                        .fontWeight(.semibold)
                     
                     suggestionsView(locationSuggestions)
                     
                     Text("Styles")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
+                        .font(.title)
+                        .fontWeight(.semibold)
                         .padding(.top)
                     
                     suggestionsView(styleSuggestions)

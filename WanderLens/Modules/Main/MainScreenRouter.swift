@@ -9,6 +9,6 @@ import Foundation
 
 protocol MainScreenRouter where Self: Coordinator {
     
-    var browseView: BrowseView { get }
+    var feedView: FeedView { get }
     var searchView: SearchView { get }
 }

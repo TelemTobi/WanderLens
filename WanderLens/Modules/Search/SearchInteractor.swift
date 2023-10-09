@@ -9,13 +9,9 @@ import Foundation
 import UIKit
 
 protocol SearchInteractable {
-    func listCollections(page: Int, orderedBy order: ListRequest.Order, completion: @escaping CollectionsListCompletion)
+    
 }
 
 class SearchInteractor: Interactor, SearchInteractable {
     
-    func listCollections(page: Int, orderedBy order: ListRequest.Order, completion: @escaping CollectionsListCompletion) {
-        let request = ListRequest(page: page, order: order)
-        dataProviders.unsplash.listCollections(request: request, completion: completion)
-    }
 }

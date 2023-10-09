@@ -13,7 +13,7 @@ class SearchPresenter: ObservableObject {
     
     enum State {
         case loading
-        case loaded(collections: [PhotoCollection])
+        case loaded // TODO: Create a SearchResult struct
         case error(message: String?)
     }
     
@@ -26,7 +26,6 @@ class SearchPresenter: ObservableObject {
     
     private let interactor: SearchInteractable
     private weak var router: SearchRouter?
-    private var subscriptions: Set<AnyCancellable> = []
     
     // MARK: - Proxies
     
@@ -41,21 +40,10 @@ class SearchPresenter: ObservableObject {
     // MARK: - Methods
     
     func onFirstAppear() {
-        fetchCollections()
+        
     }
     
     // MARK: - Private Methods
     
-    private func fetchCollections() {
-        interactor.listCollections(page: 0, orderedBy: .popularity) { [weak self] collections, error in
-            guard let self else { return }
-            
-            guard let collections else {
-                state = .error(message: error?.localizedDescription)
-                return
-            }
-            
-            state = .loaded(collections: collections)
-        }
-    }
+
 }

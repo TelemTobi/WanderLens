@@ -1,5 +1,5 @@
 //
-//  BrowsePresenter.swift
+//  FeedPresenter.swift
 //  WanderLens
 //
 //  Created by Telem Tobi on 25/09/2023.
@@ -9,11 +9,11 @@ import SwiftUI
 import Combine
 
 @MainActor
-class BrowsePresenter: ObservableObject {
+class FeedPresenter: ObservableObject {
     
     enum State {
         case loading
-        case loaded(photos: [Photo])
+        case loaded(photos: [Photo]) // TODO: Create a FeedResult struct
         case error(message: String?)
     }
     
@@ -24,8 +24,8 @@ class BrowsePresenter: ObservableObject {
     
     // MARK: - Properties
     
-    private let interactor: BrowseInteractable
-    private weak var router: BrowseRouter?
+    private let interactor: FeedInteractable
+    private weak var router: FeedRouter?
     private var subscriptions: Set<AnyCancellable> = []
     
     // MARK: - Proxies
@@ -33,7 +33,7 @@ class BrowsePresenter: ObservableObject {
     
     // MARK: - Initialiser
     
-    init(interactor: BrowseInteractable, router: BrowseRouter?) {
+    init(interactor: FeedInteractable, router: FeedRouter?) {
         self.interactor = interactor
         self.router = router
     }
@@ -75,9 +75,22 @@ class BrowsePresenter: ObservableObject {
             state = .loaded(photos: photos)
         }
     }
+    
+    private func fetchCollections() {
+        interactor.listCollections(page: 0, orderedBy: .popularity) { [weak self] collections, error in
+            guard let self else { return }
+            
+            guard let collections else {
+                state = .error(message: error?.localizedDescription)
+                return
+            }
+            
+//            state = .loaded(collections: collections)
+        }
+    }
 }
 
-extension BrowsePresenter: PhotoListItemDelegate {
+extension FeedPresenter: PhotoListItemDelegate {
     
     func savePhoto(_ photo: Photo) {
         guard let imageUrl = URL(string: photo.urls?.full ?? "") else {

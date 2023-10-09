@@ -1,31 +1,30 @@
 //
-//  BrowseListView.swift
+//  FeedPhotosView.swift
 //  WanderLens
 //
-//  Created by Telem Tobi on 29/09/2023.
+//  Created by Telem Tobi on 09/10/2023.
 //
 
 import SwiftUI
 
-extension BrowseView {
-    
-    struct ContentView: View {
-        
+extension FeedView {
+    struct PopularPhotosView: View {
+
         let photos: [Photo]
         
-        @EnvironmentObject private var presenter: BrowsePresenter
-        
+        @EnvironmentObject private var presenter: FeedPresenter
         @State private var numberOfColumns: Int = 2
         @State private var currentScale: CGFloat = 1.0
         
         var body: some View {
-            ScrollView(showsIndicators: false) {
-                DynamicVGrid(columns: numberOfColumns) {
-                    ForEach(photos) { photo in
-                        PhotoListItem(photo: photo, delegate: presenter)
-                    }
+            Text("Popular Photos")
+                .font(.title)
+                .fontWeight(.semibold)
+            
+            DynamicVGrid(columns: numberOfColumns) {
+                ForEach(photos) { photo in
+                    PhotoListItem(photo: photo, delegate: presenter)
                 }
-                .padding()
             }
             .gesture(
                 MagnifyGesture()
@@ -45,5 +44,5 @@ extension BrowseView {
 }
 
 #Preview {
-    BrowseView.ContentView(photos: Photo.mock)
+    FeedView.PopularPhotosView(photos: Photo.mock)
 }

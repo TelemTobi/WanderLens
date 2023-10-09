@@ -19,16 +19,16 @@ struct MainScreenView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            presenter.browseView
+            presenter.feedView
                 .tag(0)
                 .tabItem {
-                    Label("Browse", systemImage: "globe.americas")
+                    Label("Feed", systemImage: "house")
                 }
             
             presenter.searchView
                 .tag(1)
                 .tabItem {
-                    Label("Collections", systemImage: "photo.stack")
+                    Label("Search", systemImage: "magnifyingglass")
                 }
         }
         .onFirstAppear(perform: presenter.onFirstAppear)

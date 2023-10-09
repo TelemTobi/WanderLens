@@ -1,5 +1,5 @@
 //
-//  BrowseWireframe.swift
+//  SearchWireframe.swift
 //  WanderLens
 //
 //  Created by Telem Tobi on 03/10/2023.
