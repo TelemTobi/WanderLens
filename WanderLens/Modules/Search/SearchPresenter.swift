@@ -1,5 +1,5 @@
 //
-//  CollectionsPresenter.swift
+//  SearchPresenter.swift
 //  WanderLens
 //
 //  Created by Telem Tobi on 03/10/2023.
@@ -9,7 +9,7 @@ import SwiftUI
 import Combine
 
 @MainActor
-class CollectionsPresenter: ObservableObject {
+class SearchPresenter: ObservableObject {
     
     enum State {
         case loading
@@ -24,8 +24,8 @@ class CollectionsPresenter: ObservableObject {
     
     // MARK: - Properties
     
-    private let interactor: CollectionsInteractable
-    private weak var router: CollectionsRouter?
+    private let interactor: SearchInteractable
+    private weak var router: SearchRouter?
     private var subscriptions: Set<AnyCancellable> = []
     
     // MARK: - Proxies
@@ -33,7 +33,7 @@ class CollectionsPresenter: ObservableObject {
     
     // MARK: - Initialiser
     
-    init(interactor: CollectionsInteractable, router: CollectionsRouter?) {
+    init(interactor: SearchInteractable, router: SearchRouter?) {
         self.interactor = interactor
         self.router = router
     }

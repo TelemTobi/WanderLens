@@ -25,7 +25,7 @@ struct MainScreenView: View {
                     Label("Browse", systemImage: "globe.americas")
                 }
             
-            presenter.collectionsView
+            presenter.searchView
                 .tag(1)
                 .tabItem {
                     Label("Collections", systemImage: "photo.stack")

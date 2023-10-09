@@ -10,5 +10,5 @@ import Foundation
 protocol MainScreenRouter where Self: Coordinator {
     
     var browseView: BrowseView { get }
-    var collectionsView: CollectionsView { get }
+    var searchView: SearchView { get }
 }

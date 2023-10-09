@@ -18,7 +18,7 @@ class MainScreenPresenter: ObservableObject {
     // MARK: - Proxies
     
     var browseView: BrowseView? { router?.browseView }
-    var collectionsView: CollectionsView? { router?.collectionsView }
+    var searchView: SearchView? { router?.searchView }
     
     // MARK: - Initialiser
     
