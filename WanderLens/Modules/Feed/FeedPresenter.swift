@@ -13,7 +13,7 @@ class FeedPresenter: ObservableObject {
     
     enum State {
         case loading
-        case loaded(photos: [Photo]) // TODO: Create a FeedResult struct
+        case loaded(collections: [PhotoCollection], photos: [Photo]) // TODO: Create a FeedResult struct
         case error(message: String?)
     }
     
@@ -42,7 +42,7 @@ class FeedPresenter: ObservableObject {
     
     func onFirstAppear() {
         initSubscriptions()
-        fetchPhotos()
+        fetchFeedData()
     }
     
     // MARK: - Private Methods
@@ -63,32 +63,25 @@ class FeedPresenter: ObservableObject {
             .store(in: &subscriptions)
     }
     
-    private func fetchPhotos() {
-        interactor.listPhotos(page: 0, orderedBy: .popularity) { [weak self] photos, error in
+    private func fetchFeedData() {
+        Task.init { [weak self] in
             guard let self else { return }
             
-            guard let photos else {
-                state = .error(message: error?.localizedDescription)
+            async let collectionsResult = interactor.listCollections(page: 0, orderedBy: .popularity)
+            async let photosResult = interactor.listPhotos(page: 0, orderedBy: .popularity)
+            
+            guard let collections = await collectionsResult.collections,
+                  let photos = await photosResult.photos else {
+                state = .error(message: "An error occured 🥴")
                 return
             }
             
-            state = .loaded(photos: photos)
-        }
-    }
-    
-    private func fetchCollections() {
-        interactor.listCollections(page: 0, orderedBy: .popularity) { [weak self] collections, error in
-            guard let self else { return }
-            
-            guard let collections else {
-                state = .error(message: error?.localizedDescription)
-                return
-            }
-            
-//            state = .loaded(collections: collections)
+            state = .loaded(collections: collections, photos: photos)
         }
     }
 }
+
+// MARK: - PhotoListItemDelegate
 
 extension FeedPresenter: PhotoListItemDelegate {
     

@@ -1,5 +1,5 @@
 //
-//  FeedPhotosView.swift
+//  PhotosListView.swift
 //  WanderLens
 //
 //  Created by Telem Tobi on 09/10/2023.
@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-extension FeedView {
-    struct PopularPhotosView: View {
+struct PhotosListView: View {
 
-        let photos: [Photo]
-        
-        @EnvironmentObject private var presenter: FeedPresenter
-        @State private var numberOfColumns: Int = 2
-        @State private var currentScale: CGFloat = 1.0
-        
-        var body: some View {
+    let photos: [Photo]
+    
+    @EnvironmentObject private var presenter: FeedPresenter
+    @State private var numberOfColumns: Int = 2
+    @State private var currentScale: CGFloat = 1.0
+    
+    var body: some View {
+        VStack(alignment: .leading) {
             Text("Popular Photos")
                 .font(.title)
                 .fontWeight(.semibold)
@@ -40,9 +40,10 @@ extension FeedView {
                     }
             )
         }
+        .padding(.horizontal)
     }
 }
 
 #Preview {
-    FeedView.PopularPhotosView(photos: Photo.mock)
+    PhotosListView(photos: Photo.mock)
 }

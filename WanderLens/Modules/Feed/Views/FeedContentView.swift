@@ -11,23 +11,24 @@ extension FeedView {
     
     struct ContentView: View {
         
+        let collections: [PhotoCollection]
         let photos: [Photo]
         
         @EnvironmentObject private var presenter: FeedPresenter
         
         var body: some View {
             ScrollView(showsIndicators: false) {
-                VStack(alignment: .leading) {
-                    CollectionsView()
+                VStack(spacing: 30) {
+                    CollectionsListView(collections: collections)
                     
-                    PopularPhotosView(photos: photos)
+                    PhotosListView(photos: photos)
                 }
-                .padding()
+                .padding(.vertical)
             }
         }
     }
 }
 
 #Preview {
-    FeedView.ContentView(photos: Photo.mock)
+    FeedView.ContentView(collections: PhotoCollection.mock, photos: Photo.mock)
 }

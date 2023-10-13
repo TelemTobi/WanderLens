@@ -22,8 +22,8 @@ struct FeedView: View {
                 case .loading:
                     ProgressView()
                     
-                case .loaded(let photos):
-                    ContentView(photos: photos)
+                case .loaded(let collections, let photos):
+                    ContentView(collections: collections, photos: photos)
                         .environmentObject(presenter)
                     
                 case .error(let message):
