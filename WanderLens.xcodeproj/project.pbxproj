@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D09E6112ADD4F0B003E80FF /* FeedEmptyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D09E6102ADD4F0B003E80FF /* FeedEmptyState.swift */; };
 		7D38130B2AC70CE100C98302 /* TagCloudsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38130A2AC70CE100C98302 /* TagCloudsView.swift */; };
 		7D38130E2AC70E7A00C98302 /* TagButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D38130D2AC70E7A00C98302 /* TagButtonStyle.swift */; };
 		7D3813132AC8599100C98302 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 7D3813122AC8599100C98302 /* AlertToast */; };
@@ -110,6 +111,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D09E6102ADD4F0B003E80FF /* FeedEmptyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedEmptyState.swift; sourceTree = "<group>"; };
 		7D38130A2AC70CE100C98302 /* TagCloudsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagCloudsView.swift; sourceTree = "<group>"; };
 		7D38130D2AC70E7A00C98302 /* TagButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagButtonStyle.swift; sourceTree = "<group>"; };
 		7D3813152AC85ABC00C98302 /* AlertType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertType.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				7D455F302AC6CB1800F139F9 /* FeedContentView.swift */,
+				7D09E6102ADD4F0B003E80FF /* FeedEmptyState.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -849,6 +852,7 @@
 				7D62E7F32AB8745C002AA24F /* AppData.swift in Sources */,
 				7D3813252ACBDC1D00C98302 /* SearchPresenter.swift in Sources */,
 				7D62E8512ABB2ACB002AA24F /* PhotosSearchResponse.swift in Sources */,
+				7D09E6112ADD4F0B003E80FF /* FeedEmptyState.swift in Sources */,
 				7D62E8292AB87AEE002AA24F /* TargetEndPoint.swift in Sources */,
 				7D638F382AC0C92000C9D4AD /* Array+Extension.swift in Sources */,
 				7D62E81C2AB875BD002AA24F /* AppCoordinator.swift in Sources */,
