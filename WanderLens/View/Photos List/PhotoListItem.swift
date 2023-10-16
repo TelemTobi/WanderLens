@@ -28,7 +28,6 @@ struct PhotoListItem: View {
                 )
                 .resizable()
             }
-            .transition(.fade(duration: 0.2))
             .aspectRatio(photo.ratio, contentMode: .fit)
             .cornerRadius(5)
             .contextMenu(menuItems: {

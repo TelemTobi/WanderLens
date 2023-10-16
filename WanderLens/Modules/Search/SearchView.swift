@@ -20,7 +20,7 @@ struct SearchView: View {
     }
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Group {
                 if isSearching {
                     Text("Search Results")

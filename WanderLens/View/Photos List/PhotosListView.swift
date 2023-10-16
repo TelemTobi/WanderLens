@@ -10,6 +10,8 @@ import SwiftUI
 struct PhotosListView: View {
 
     let photos: [Photo]
+    @Binding var selectedIndex: Int?
+    let namespace: Namespace.ID
     
     @EnvironmentObject private var presenter: FeedPresenter
     @State private var numberOfColumns: Int = 2
@@ -22,8 +24,12 @@ struct PhotosListView: View {
                 .fontWeight(.semibold)
             
             DynamicVGrid(columns: numberOfColumns) {
-                ForEach(photos) { photo in
+                ForEach(Array(photos.enumerated()), id: \.offset) { index, photo in
                     PhotoListItem(photo: photo, delegate: presenter)
+                        .matchedGeometryEffect(id: index.description, in: namespace, isSource: selectedIndex == nil)
+                        .onTapGesture {
+                            withAnimation { selectedIndex = index }
+                        }
                 }
             }
             .gesture(
@@ -45,5 +51,7 @@ struct PhotosListView: View {
 }
 
 #Preview {
-    PhotosListView(photos: Photo.mock)
+    @Namespace var namespace
+    
+    return PhotosListView(photos: Photo.mock, selectedIndex: .constant(nil), namespace: namespace)
 }

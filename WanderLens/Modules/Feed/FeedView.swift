@@ -16,7 +16,7 @@ struct FeedView: View {
     }
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Group {
                 switch presenter.state {
                 case .loading:

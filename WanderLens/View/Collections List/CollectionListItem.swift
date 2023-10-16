@@ -43,14 +43,6 @@ struct CollectionListItem: View {
             view
                 .scaleEffect(phase.isIdentity ? 1 : 0.95)
         }
-        .contextMenu(menuItems: {
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                Label("Like", systemImage: "heart")
-            }
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
-                Label("More Details", systemImage: "info.circle")
-            }
-        })
     }
     
     private func OverlayView(for collection: PhotoCollection) -> some View {
