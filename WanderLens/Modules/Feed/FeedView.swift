@@ -27,7 +27,15 @@ struct FeedView: View {
                         .environmentObject(presenter)
                     
                 case .error(let message):
-                    Text(message ?? "An error occured")
+                    ContentUnavailableView {
+                        Label("Something went wrong", systemImage: "exclamationmark.triangle")
+                    } description: {
+                        Text(message ?? "An error occured")
+                    } actions: {
+                        Button("Retry") {
+                            presenter.retry()
+                        }
+                    }
                 }
             }
             .navigationTitle("Feed")

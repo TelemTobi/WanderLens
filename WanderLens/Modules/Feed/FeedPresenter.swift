@@ -45,6 +45,11 @@ class FeedPresenter: ObservableObject {
         fetchFeedData()
     }
     
+    func retry() {
+        state = .loading
+        fetchFeedData()
+    }
+    
     // MARK: - Private Methods
     
     private func initSubscriptions() {
@@ -72,7 +77,7 @@ class FeedPresenter: ObservableObject {
             
             guard let collections = await collectionsResult.collections,
                   let photos = await photosResult.photos else {
-                state = .error(message: "An error occured 🥴")
+                state = .error(message: "An error occured")
                 return
             }
             
